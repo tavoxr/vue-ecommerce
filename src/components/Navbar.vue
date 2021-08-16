@@ -28,7 +28,7 @@
 
                 <router-link to="/cart"  class="button is-success">
                 <span class="icon"><i class="fas fa-shopping-cart"></i></span>
-                <span class="">Cart</span>
+                <span class="">Cart ({{cartTotalLength}})</span>
                 </router-link>
 
               </div>
@@ -40,14 +40,23 @@
 </template>
 
 
-<script>
+<script >
 export default {
     name: 'Navbar',
-    data(){
-        return{
-            showMobileMenu: false
+    props:{
+        
+    },
+     computed:{
+      cartTotalLength(){
+        let totalLength= 0
+
+        for(let i=0; i < this.$store.state.cart.items.length; i++){
+          totalLength  += this.$store.state.cart.items[i].quantity
         }
-    }
+        return totalLength
+      }
+    },
+   
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -74,11 +83,5 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-});
-
+    });
 </script>
-
-
-<style lang="scss" scoped>
-
-</style>

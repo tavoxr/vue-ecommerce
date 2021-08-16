@@ -1,6 +1,6 @@
 <template>
   <div id="wrapper">
-  <Navbar/>    
+    <Navbar />
   <section class="section">
     <router-view/>
   </section>
@@ -17,9 +17,27 @@ import Navbar from './components/Navbar.vue'
 export default {
   name:'App',
   components:{
-    Navbar
-  }
+    Navbar,
+  },
+  data(){
+    return{
+      
+      cart:{
+        items: [],
+      }
+    }
+  },
+    mounted(){
+      this.cart = this.$store.state.cart
+    },
+    beforeCreate(){
+      this.$store.commit('initializeStore')
+    },
+   
+   
 }
+
+
 </script>
 <style lang="scss">
 @import '../node_modules/bulma';
