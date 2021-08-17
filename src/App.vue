@@ -1,6 +1,7 @@
 <template>
   <div id="wrapper">
     <Navbar />
+    <LoadingBar/>  
   <section class="section">
     <router-view/>
   </section>
@@ -13,11 +14,13 @@
 
 <script>
 import Navbar from './components/Navbar.vue'
+import LoadingBar from './components/LoadingBar.vue'
 
 export default {
   name:'App',
   components:{
     Navbar,
+    LoadingBar
   },
   data(){
     return{
@@ -41,4 +44,7 @@ export default {
 </script>
 <style lang="scss">
 @import '../node_modules/bulma';
+
+
+
 </style>

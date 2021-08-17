@@ -44,12 +44,17 @@ export default {
   },
   mounted(){
     this.getLatestProducts()
+    document.title =  'Home | Ecomm'
+
   },
   methods:{
     async getLatestProducts(){
 
       try{
-       const response = await axios.get('/api/latest-products/')
+        this.$store.commit('setIsLoading', true)
+        const response = await axios.get('/api/latest-products/')
+        this.$store.commit('setIsLoading', false)
+
        console.log('latest-products', response.data)
        this.latestProducts = response.data
       }catch(error){

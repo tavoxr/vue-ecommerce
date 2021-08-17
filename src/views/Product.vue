@@ -47,14 +47,18 @@ export default {
     },
     methods:{
        async getProduct(){
+
+           this.$store.commit('setIsLoading', true)
            const category_slug =  this.$route.params.category_slug
            const product_slug = this.$route.params.product_slug
 
            const response = await axios.get(`/api/products/${category_slug}/${product_slug}`)
-
+           this.$store.commit('setIsLoading', false)
+             
            console.log('productDetail', response.data)
 
             this.product = response.data
+            document.title = this.product.name + '| Ecomm'
 
         },
         addToCart(){
@@ -76,7 +80,8 @@ export default {
                 duration:2000,
                 position:"bottom-right"
             })
-        }
+        },
+        
     }
     
 }
