@@ -15,6 +15,7 @@
 <script>
 import Navbar from './components/Navbar.vue'
 import LoadingBar from './components/LoadingBar.vue'
+import axios from 'axios'
 
 export default {
   name:'App',
@@ -35,6 +36,14 @@ export default {
     },
     beforeCreate(){
       this.$store.commit('initializeStore')
+
+      const token = this.$store.state.token
+
+      if(token){
+        axios.defaults.headers.common['Authorization'] = "Token" + token
+      }else{
+        axios.defaults.headers.common['Authorization'] = ""
+      }
     },
    
    
