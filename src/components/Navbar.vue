@@ -46,8 +46,8 @@
 
           </div>
         <div class="navbar-end">
-          <router-link to="/summer" class="navbar-item"  >Summer</router-link>
-          <router-link to="/winter" class="navbar-item">Winter</router-link>
+          <router-link to="/laptop" class="navbar-item"  >Laptop</router-link>
+          <router-link to="/desktop" class="navbar-item">Desktop</router-link>
           
           <div class="navbar-item">
               <div class="buttons">
