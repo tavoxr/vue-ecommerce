@@ -4,6 +4,6 @@ import router from './router'
 import store from './store'
 import axios from 'axios'
 
-axios.defaults.baseURL = 'http://localhost:8000'
+axios.defaults.baseURL = 'https://vue-ecomm-tavox.netlify.app'
 
 createApp(App).use(store).use(router, axios).mount('#app')
