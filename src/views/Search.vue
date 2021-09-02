@@ -36,7 +36,10 @@ export default {
     mounted(){
         document.title = "Search | Ecomm"
         let uri = window.location.search.substring(1)
+        console.log('uri', uri)
         let params = new URLSearchParams(uri)
+        console.log('params',params)
+        console.log('paramsgetquery',params.get('query'))
 
         if(params.get('query')){
             this.query = params.get('query')
