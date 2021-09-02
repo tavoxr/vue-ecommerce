@@ -9,7 +9,7 @@
                  v-for="product in products"
                  v-bind:key="product.id"
                 >
-                <Product :product="product" />
+                <Product v-bind:product="product" />
             </div>
 
         </div>
