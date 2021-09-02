@@ -9,7 +9,7 @@
                  v-for="product in products"
                  v-bind:key="product.id"
                 >
-                <Product v-bind:product="product" />
+                <Product :product="product" />
             </div>
 
         </div>
@@ -47,7 +47,7 @@ export default {
          async performSearch(){
 
             this.$store.commit('setIsLoading', true)
-            const response = await axios.post('/api/products/search/',{"query": this.query})
+            const response = await axios.post('/api/products/search/',{'query': this.query})
             this.$store.commit('setIsLoading', false)
             
             console.log('response.data search', response.data)
