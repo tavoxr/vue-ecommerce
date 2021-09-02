@@ -37,8 +37,8 @@ export default {
         document.title = "Search | Ecomm"
         let uri = window.location.search.substring(1)
         console.log('uri', uri)
-        let params = new URLSearchParams(uri)
-        console.log('params',params)
+            let params = new URLSearchParams(uri)
+            console.log('params',params)
         console.log('paramsgetquery',params.get('query'))
 
         if(params.get('query')){
@@ -50,7 +50,7 @@ export default {
          async performSearch(){
 
             this.$store.commit('setIsLoading', true)
-            const response = await axios.post('/api/products/search',{'query': this.query})
+            const response = await axios.post('/api/products/search/',{'query': this.query})
           
             
             console.log('response.data search', response.data)

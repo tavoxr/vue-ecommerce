@@ -18,7 +18,7 @@
       </div> 
 
       <div id="navbarMenu" class="navbar-menu">
-          <div class="navbar-start"> 
+      <!--    <div class="navbar-start"> 
               <div class="navbar-item"> 
                   <form method="get" action="/search"   >
                   <div class="field has-addons"> 
@@ -45,6 +45,8 @@
               </div>
 
           </div>
+
+        -->  
         <div class="navbar-end">
           <router-link to="/laptop" class="navbar-item"  >Laptop</router-link>
           <router-link to="/desktop" class="navbar-item">Desktop</router-link>
