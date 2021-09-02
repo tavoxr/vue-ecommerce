@@ -20,7 +20,7 @@
       <div id="navbarMenu" class="navbar-menu">
           <div class="navbar-start"> 
               <div class="navbar-item"> 
-                  <form method="GET" action="/search"   >
+                  <form method="POST" action="/search"   >
                   <div class="field has-addons"> 
                       <div class="control"> 
                           <input type="text" 
