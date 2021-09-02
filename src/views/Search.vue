@@ -50,11 +50,12 @@ export default {
          async performSearch(){
 
             this.$store.commit('setIsLoading', true)
-            const response = await axios.post('/api/products/search/',{'query': this.query})
-            this.$store.commit('setIsLoading', false)
+            const response = await axios.post('/api/products/search',{'query': this.query})
+          
             
             console.log('response.data search', response.data)
             this.products =  response.data
+            this.$store.commit('setIsLoading', false)
         }
     }
 
