@@ -5,7 +5,7 @@
                 <h2 class="is-size-2 has-text-centered">{{category.name}}</h2>
 
             </div>
-             <div class="column is-3" 
+             <div class="column  is-one-third-desktop" 
            v-for="product in category.products"
            v-bind:key="product.id"
            >
