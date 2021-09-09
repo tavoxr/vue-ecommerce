@@ -97,18 +97,24 @@
                         <p v-for="error in errors" v-bind:key="error">{{error}}</p>
                 </div>
                     <hr/>
-                    <div class="is-warning mb-3">
+                    <article class="message is-warning mb-3">
+                             <div class="message-header">
+                                <p>Note</p>
+                                
+                                </div>
+                                <div class="message-body">
+                                    <p>This is not a real ecommerce, all products showed in this app are not real.</p>
+                                    <p>In order to test the payments please follow the instructions below:</p>
+                                    <p><strong>Credit or Debit Card:</strong> Use any of the following test card numbers, a valid expiration date in the future, 
+                                        and any random CVC number, to create a successful payment:<br/>
+                                        Visa	    4242424242424242 <br/>
+                                        Mastercard	5555555555554444<br/>
+                                        or you can check other test cards <a id="hereLink" target="_blank" href="https://stripe.com/docs/testing">here</a>
+                                    </p>
+                                </div>
 
-                        <p><strong>Note:</strong>This is not a real ecommerce, all products showed in this app are not real.</p>
-                        <p>In order to test the payments please follow the instructions below:</p>
-                        <p><strong>Credit or Debit Card:</strong> Use any of the following test card numbers, a valid expiration date in the future, 
-                            and any random CVC number, to create a successful payment:<br/>
-                            Visa	    4242424242424242 <br/>
-                            Mastercard	5555555555554444<br/>
-                            or you can check other test cards <a id="hereLink" target="_blank" href="https://stripe.com/docs/testing">here</a>
-                        </p>
+                    </article>
 
-                    </div>
                     <div id="card-element" class="mb-5"></div>
 
                     <template v-if="cartTotalLength">
