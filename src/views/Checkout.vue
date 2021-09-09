@@ -103,8 +103,8 @@
                                 
                                 </div>
                                 <div class="message-body">
-                                    <p>This is not a real ecommerce, all products showed in this app are not real.</p>
-                                    <p>In order to test the payments please follow the instructions below:</p>
+                                    <p>This is not a real ecommerce, all products showed in this app are not real.</p><br/>
+                                    <p>In order to test the payments please follow the instructions below:</p><br/>
                                     <p><strong>Credit or Debit Card:</strong> Use any of the following test card numbers, a valid expiration date in the future, 
                                         and any random CVC number, to create a successful payment:<br/>
                                         Visa	    4242424242424242 <br/>
