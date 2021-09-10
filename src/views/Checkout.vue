@@ -105,7 +105,7 @@
                                 <div class="message-body">
                                     <p>This is not a real ecommerce, all products showed in this app are not real.</p><br><br>
                                     <p>In order to test the payments please follow the instructions below:</p><br><br>
-                                    <p><strong>Credit or Debit Card:</strong> Use any of the following test card numbers, a valid expiration date in the future, 
+                                    <p>Use any of the following test card numbers, a valid expiration date in the future, 
                                         and any random CVC number, to create a successful payment:<br><br>
                                         Visa	    4242424242424242 <br>
                                         Mastercard	5555555555554444<br>
